@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # NoticeHub — Smart Digital Notice Board
 
 NoticeHub is a full-stack college notice board built with React, Express, and SQLite. The local database is created automatically on first backend start; MySQL can also be selected when you have a configured MySQL account.
@@ -55,3 +56,7 @@ To switch an existing account to teacher, run `npm run make-teacher -- your_emai
 Set `DB_CLIENT=mysql` in `server/.env`, then set `DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASSWORD`, and `DB_NAME`. Create the database and tables with `database/schema.sql` before starting the backend. Existing MySQL databases are upgraded to support the teacher role when the backend starts. Without `DB_CLIENT=mysql`, the app uses its local SQLite database.
 
 Set `JWT_SECRET` to a random value at least 32 characters long for production. The built-in development secret is only for local use. Keep `.env` and `server/noticehub.sqlite` private and out of public repositories.
+=======
+# NoticeHub
+NoticeHub is a digital college notice board built using React.js, Node.js, Express.js, and SQLite. It enables teachers and admins to publish notices, while students receive personalized announcements based on their department, year, and semester, with deadline alerts and read/unread tracking.
+>>>>>>> 16726e50e6e296d75d806996f2ad3860cd291fed

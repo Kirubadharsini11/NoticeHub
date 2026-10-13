@@ -1,0 +1,345 @@
+{
+  "version": "1",
+  "workspaceId": "9d28c2fdef9c5b8e",
+  "workspaceName": "NoticeHub",
+  "enabled": true,
+  "updatedAt": "2026-10-13T22:37:10.737Z",
+  "detectedStack": {
+    "languages": [
+      "JavaScript/TypeScript"
+    ],
+    "frameworks": [
+      "React",
+      "Vite",
+      "Express"
+    ],
+    "packageManager": "npm",
+    "uiLibraries": [],
+    "orm": [],
+    "authLibraries": [],
+    "validationLibraries": [],
+    "paymentLibraries": [],
+    "testTools": [],
+    "scripts": {
+      "client/dev": "vite",
+      "client/build": "vite build",
+      "client/preview": "vite preview",
+      "server/start": "node server.js",
+      "server/dev": "node --watch server.js",
+      "server/make-admin": "node make-admin.js",
+      "server/make-teacher": "node make-teacher.js"
+    },
+    "importantDirs": [
+      "client",
+      "server"
+    ],
+    "sensitiveFiles": []
+  },
+  "sections": {
+    "stack": [],
+    "packageManager": [],
+    "architectureRules": [],
+    "codingConventions": [],
+    "sensitiveFiles": [
+      {
+        "id": "0a5f7f28e818bc4d",
+        "text": "DB schema: database/schema.sql",
+        "kind": "risk",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "database/schema.sql"
+        },
+        "lastVerifiedAt": "2026-10-13T22:37:10.736Z"
+      },
+      {
+        "id": "895b1cdb20e92d31",
+        "text": "Environment file: server/.env",
+        "kind": "risk",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "server/.env"
+        },
+        "lastVerifiedAt": "2026-10-13T22:37:10.736Z"
+      }
+    ],
+    "forbiddenActions": [
+      {
+        "id": "fbb699a0194f1b53",
+        "text": "Never log or commit values for env names: DB_PASSWORD, JWT_SECRET.",
+        "kind": "constraint",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "lastVerifiedAt": "2026-10-13T22:37:10.736Z"
+      }
+    ],
+    "allowedCommands": [
+      {
+        "id": "b9d901aab4f02723",
+        "text": "npm run dev (in client) -> vite",
+        "kind": "command",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "client/package.json"
+        },
+        "appliesTo": [
+          "client"
+        ],
+        "lastVerifiedAt": "2026-10-13T22:37:10.736Z"
+      },
+      {
+        "id": "863bb2bb273ceae1",
+        "text": "npm run build (in client) -> vite build",
+        "kind": "command",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "client/package.json"
+        },
+        "appliesTo": [
+          "client"
+        ],
+        "lastVerifiedAt": "2026-10-13T22:37:10.736Z"
+      },
+      {
+        "id": "7988fa7dd011a503",
+        "text": "npm run start (in server) -> node server.js",
+        "kind": "command",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "server/package.json"
+        },
+        "appliesTo": [
+          "server"
+        ],
+        "lastVerifiedAt": "2026-10-13T22:37:10.736Z"
+      },
+      {
+        "id": "c71b3183b78e16d1",
+        "text": "npm run dev (in server) -> node --watch server.js",
+        "kind": "command",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "server/package.json"
+        },
+        "appliesTo": [
+          "server"
+        ],
+        "lastVerifiedAt": "2026-10-13T22:37:10.736Z"
+      }
+    ],
+    "businessRules": [],
+    "integrationRules": [],
+    "testingExpectations": [],
+    "agentInstructions": [],
+    "openQuestions": []
+  },
+  "packages": [
+    {
+      "path": "client",
+      "name": "noticehub-client",
+      "detectedStack": {
+        "languages": [
+          "JavaScript/TypeScript"
+        ],
+        "frameworks": [
+          "React",
+          "Vite"
+        ],
+        "packageManager": "npm",
+        "uiLibraries": [],
+        "orm": [],
+        "authLibraries": [],
+        "validationLibraries": [],
+        "paymentLibraries": [],
+        "testTools": [],
+        "scripts": {
+          "dev": "vite",
+          "build": "vite build",
+          "preview": "vite preview"
+        },
+        "importantDirs": [
+          "src"
+        ],
+        "sensitiveFiles": []
+      },
+      "items": [
+        {
+          "id": "client:fact:Project name: noticehub-client",
+          "text": "Project name: noticehub-client",
+          "kind": "fact",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "client/package.json"
+          },
+          "appliesTo": [
+            "client"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        },
+        {
+          "id": "client:fact:Framework detected: React.",
+          "text": "Framework detected: React.",
+          "kind": "fact",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "client/package.json"
+          },
+          "appliesTo": [
+            "client"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        },
+        {
+          "id": "client:fact:Framework detected: Vite.",
+          "text": "Framework detected: Vite.",
+          "kind": "fact",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "client/package.json"
+          },
+          "appliesTo": [
+            "client"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        },
+        {
+          "id": "client:command:npm run dev -> vite",
+          "text": "npm run dev -> vite",
+          "kind": "command",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "client/package.json"
+          },
+          "appliesTo": [
+            "client"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        },
+        {
+          "id": "client:command:npm run build -> vite build",
+          "text": "npm run build -> vite build",
+          "kind": "command",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "client/package.json"
+          },
+          "appliesTo": [
+            "client"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        }
+      ]
+    },
+    {
+      "path": "server",
+      "name": "noticehub-server",
+      "detectedStack": {
+        "languages": [
+          "JavaScript/TypeScript"
+        ],
+        "frameworks": [
+          "Express"
+        ],
+        "packageManager": "npm",
+        "uiLibraries": [],
+        "orm": [],
+        "authLibraries": [],
+        "validationLibraries": [],
+        "paymentLibraries": [],
+        "testTools": [],
+        "scripts": {
+          "start": "node server.js",
+          "dev": "node --watch server.js",
+          "make-admin": "node make-admin.js",
+          "make-teacher": "node make-teacher.js"
+        },
+        "importantDirs": [],
+        "sensitiveFiles": []
+      },
+      "items": [
+        {
+          "id": "server:fact:Project name: noticehub-server",
+          "text": "Project name: noticehub-server",
+          "kind": "fact",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "server/package.json"
+          },
+          "appliesTo": [
+            "server"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        },
+        {
+          "id": "server:fact:Framework detected: Express.",
+          "text": "Framework detected: Express.",
+          "kind": "fact",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "server/package.json"
+          },
+          "appliesTo": [
+            "server"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        },
+        {
+          "id": "server:command:npm run start -> node server.js",
+          "text": "npm run start -> node server.js",
+          "kind": "command",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "server/package.json"
+          },
+          "appliesTo": [
+            "server"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        },
+        {
+          "id": "server:command:npm run dev -> node --watch server.js",
+          "text": "npm run dev -> node --watch server.js",
+          "kind": "command",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "server/package.json"
+          },
+          "appliesTo": [
+            "server"
+          ],
+          "lastVerifiedAt": "2026-10-13T22:37:10.735Z"
+        }
+      ]
+    }
+  ]
+}
